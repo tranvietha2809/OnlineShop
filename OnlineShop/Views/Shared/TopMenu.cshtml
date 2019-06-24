@@ -1,0 +1,11 @@
+﻿@model List <Model1.EF.Menu>
+<div class="header" id="home">
+    <div class="container">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li> <a href="@item.Link" data-toggle="modal" data-target="#myModal2"><i aria-hidden="true"></i>@item.Text</a></li>
+            }          
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿@model List<Model1.EF.ProductCategory>
+
+<li>
+    <ul>
+        @foreach(var item in Model.Where(x => x.ParentID == null))
+        {
+            <li><a href="~/mens-product/@item.MetaTitle-@item.ID">@item.Name</a></li>
+        }
+    </ul>
+</li>

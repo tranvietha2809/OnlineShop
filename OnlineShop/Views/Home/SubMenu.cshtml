@@ -1,0 +1,26 @@
+﻿@model List<Model1.EF.SubMenu>
+
+    <div class="col-sm-3 multi-gd-img">
+        <ul class="multi-column-dropdown">
+            @{ 
+                var firstSeven = Model.Take(7);
+            }
+            @foreach (var item in firstSeven)
+            {
+            <li><a href="@item.Link">@item.Text</a></li>
+            }
+        </ul>
+    </div>
+    <div class="col-sm-3 multi-gd-img">
+        <ul class="multi-column-dropdown">
+            @{
+                var lastElements = Model.Skip(7);
+            }
+            @foreach (var item in lastElements)
+            {
+                <li><a href="@item.Link">@item.Text</a></li>
+            }
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+</div>
